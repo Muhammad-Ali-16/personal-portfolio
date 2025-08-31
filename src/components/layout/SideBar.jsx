@@ -6,7 +6,7 @@ function SideBar() {
 
 
   return (
-    <nav className="w-[235px] fixed bg-[var(--background-dark)] h-full overflow-hidden overflow-y-auto hidden xl:block left-0 top-0">
+    <nav className="w-[235px] fixed bg-[var(--background-dark)] h-full overflow-hidden overflow-y-auto hidden xl:block left-0 top-0 z-10">
       <div className="mx-auto p-2 h-full flex flex-col items-center text-center text-[var(--text-heading-light)]">
         <div className='cursor-pointer mt-10 bg-[var(--nav-logo)] p-2 rounded-full'>
           <img src={logo} alt="logo" className='rounded-full h-[150px] w-[150px]' />
