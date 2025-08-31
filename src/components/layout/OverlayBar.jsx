@@ -1,0 +1,38 @@
+import React, { useState } from 'react'
+import SocialIcons from '../common/SocialIcons'
+import NavLinks from '../common/NavLinks'
+
+function OverlayBar() {
+  const [isOpen, setIsOpen] = useState(false)
+
+  const HandleToggle = () => {
+    setIsOpen(!isOpen)
+  }
+
+  return (
+    <nav className='max-h-[60vh] block xl:hidden bg-[var(--background-dark)] fixed w-full text-[var(--text-heading-light)]'>
+      <div className='m-5'>
+        <div className='flex flex-row items-center justify-between'>
+          <h3 className='text-xl font-bold top-0'>Muhammad Ali</h3>
+          <div className='social-icons flex flex-row justify-center items-center space-x-5 text-lg'>
+            <SocialIcons />
+            <div className='toogler-icon ms-1'>
+              <button className='cursor-pointer' onClick={HandleToggle}>
+                <span className={`my-2 h-0.5 w-8 block bg-white transition-all duration-200 ease-in-out transform ${isOpen ? 'rotate-45 translate-y-2.5' : ''}`}></span>
+                <span className={`my-2 h-0.5 w-8 block bg-white transition-all duration-200 ease-in-out ${isOpen ? 'opacity-0' : 'opacity-100'}`}></span>
+                <span className={`my-2 h-0.5 w-8 block bg-white transition-all duration-200 ease-in-out transform ${isOpen ? '-rotate-45 -translate-y-2.5' : ''}`}></span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div className={`mt-3 overlay-content transition-all duration-400 ${isOpen ? 'max-h-[60vh] opacity-100' : 'max-h-0 opacity-0'} ease-in-out`}>
+          <ul className='space-y-4'>
+            <NavLinks border="border-b border-[#fafafa26] pb-3" />
+          </ul>
+        </div>
+      </div>
+    </nav>
+  )
+}
+
+export default OverlayBar
