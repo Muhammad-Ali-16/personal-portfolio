@@ -3,7 +3,7 @@ import { Typewriter } from 'react-simple-typewriter'
 
 function Hero() {
   return (
-    <section className="hero-main relative top-0 left-0 bg-[#000000b8] z-1 w-full h-[100vh] flex justify-center items-center text-center text-[var(--text-heading-light)]">
+    <section className="hero-main relative top-0 left-0 bg-[#000000b8] z-1 w-full h-[100vh] flex justify-center items-center text-center text-[var(--text-heading-light)]" id='home'>
       <div className="relative max-w-7xl mx-auto">
         <div className='hero-content'>
           <h4 className='text-2xl lg:text-3xl font-semibold'>Welcome!</h4>
