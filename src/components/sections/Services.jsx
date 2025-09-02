@@ -1,29 +1,34 @@
 import SectionHeading from "../common/SectionHeading"
 
 function Services() {
+
+  const ServicesCards = [
+    { id: '1', Icon: 'laptop', Heading: 'Responsive Web Design', Description: "Build modern and mobile-friendly websites using HTML5, CSS3, and modern frameworks" },
+    { id: '2', Icon: 'code-slash', Heading: 'Frontend Development', Description: "Develop interactive and optimized user interfaces using JavaScript and React." },
+    { id: '3', Icon: 'layout-text-window', Heading: 'UI/UX Implementation', Description: "Convert design prototypes into functional interfaces with a focus on user experience." },
+    { id: '4', Icon: 'palette-fill', Heading: 'Tailwind & Bootstrap Integration', Description: "Implement clean, responsive layouts with Tailwind CSS and Bootstrap." },
+    { id: '5', Icon: 'diagram-3', Heading: 'React Development', Description: "Build adaptive, mobile-friendly websites using React.js" },
+    { id: '6', Icon: 'speedometer2', Heading: 'Performance Optimization', Description: "Optimize speed, SEO, and accessibility for better user experience and ranking." },
+
+  ]
+
   return (
-    <div className='h-auto bg-[var(--background-white)] w-full' id="about">
-      <div className="max-w-7xl mx-auto py-20">
-        <SectionHeading Heading={"About Me"} SubHeading={"Know Me More"} />
-        <div className="services-content max-w-7xl mx-auto mt-15 xl:mt-20">
-          <div className=" mx-8 lg:mx-28 xl:mx-10 grid grid-rows-1 grid-cols-3">
-            <div className="services-about text-center xl:text-start col-span-full xl:col-span-2">
-              <h3 className="font-bold text-[var(--text-dark)] text-3xl mb-4">I'm <span className="text-[var(--text-secondary)]">Muhmmad Ali, </span>a Web Designer</h3>
-              <p className="text-[var(--text-primary)]">I design and develop responsive, user-friendly websites that help businesses build a strong online presence at an affordable price. I focus on delivering high-quality work on time and within budget, ensuring every project meets your goals.</p>
-              <br />
-              <p className="text-[var(--text-primary)]">I ensure that all websites I build align with your brand, function, and layout so there is a smooth user experience on every device. I ensure every step from design to implementation includes, properly formatted and written lines, a clean and up-to-date appearance, and aspects that are beneficial to the business.
-              </p>
+    <div className='h-auto bg-[var(--background-light)] w-full' id="services">
+      <div className="max-w-7xl mx-auto pt-20 pb-12">
+        <SectionHeading Heading={"Services"} SubHeading={"What I Do?"} />
+        <div className="services-content max-w-7xl mx-auto mt-15 xl:mt-20 grid grid-rows-1 lg:grid-cols-2 grid-cols-1 gap-8 lg:gap-15">
+
+          {ServicesCards.map((card) => (
+            <div className="service-card flex flex-row justify-start  items-center space-x-6 mx-8 lg:mx-4" key={card.id}>
+              <div className="bg-[var(--background-white)] drop-shadow-sm/25 flex justify-center items-center p-6 rounded-lg text-3xl text-[var(--text-secondary)]">
+                <i class={`bi bi-${card.Icon}`}></i>
+              </div>
+              <div>
+                <h3 className="font-bold text-[var(--text-dark)] text-xl mb-2">{card.Heading}</h3>
+                <p className="text-[var(--text-primary)] ">{card.Description}</p>
+              </div>
             </div>
-            <div className="services-details col-span-full xl:col-span-1 xl:mx-4 mx-0 mt-20 xl:mt-0">
-              <ul className="flex flex-col xl:ms-13 ms-0 space-y-6 text-[var(--text-primary)]">
-                <li className="border-b border-[var(--color-border)] pb-2 "><h3 className="font-bold">Name: <span className="font-normal">Muhammad Ali</span> </h3></li>
-                <li className="border-b border-[var(--color-border)] pb-2 "><h3 className="font-bold">Email: <a href="https://mail.google.com/mail/?view=cm&fs=1&to=aliraza1.work@gmail.com" target="_blank" className="text-[var(--text-secondary)] font-normal">aliraza1.work@gmail.com</a> </h3></li>
-                <li className="border-b border-[var(--color-border)] pb-2 "><h3 className="font-bold">Age: <span className="font-normal">18</span> </h3></li>
-                <li ><h3 className="font-bold">From: <span className="font-normal">Karachi, Pakistan</span> </h3></li>
-                <a href="/personal-portfolio/Ali-Raza-Resume.pdf" download="Ali-Raza-Resume.pdf"><button className="bg-[var(--text-secondary)] text-white px-7 py-4 rounded-full drop-shadow-lg/25 cursor-pointer mt-3">Download Resume</button></a>
-              </ul>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </div>
