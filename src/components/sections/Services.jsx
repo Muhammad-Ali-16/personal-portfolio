@@ -13,25 +13,25 @@ function Services() {
   ]
 
   return (
-    <div className='h-auto bg-[var(--background-light)] w-full' id="services">
-      <div className="max-w-7xl mx-auto pt-20 pb-12">
+    <section className='h-auto bg-[var(--background-light)] w-full' id="services">
+      <div className="w-full mx-auto pt-20 pb-12">
         <SectionHeading Heading={"Services"} SubHeading={"What I Do?"} />
-        <div className="services-content max-w-7xl mx-auto mt-15 xl:mt-20 grid grid-rows-1 lg:grid-cols-2 grid-cols-1 gap-8 lg:gap-15">
+        <div className="services-content max-w-screen-2xl mx-auto mt-15 xl:mt-20 grid grid-rows-1 lg:grid-cols-2 grid-cols-1 gap-8 lg:gap-15">
 
           {ServicesCards.map((card) => (
             <div className="service-card flex flex-row justify-start  items-center space-x-6 mx-8 lg:mx-4" key={card.id}>
-              <div className="bg-[var(--background-white)] drop-shadow-sm/25 flex justify-center items-center p-6 rounded-lg text-3xl text-[var(--text-secondary)]">
+              <div className="bg-[var(--background-white)] drop-shadow-sm/25 flex justify-center items-center p-3 xl:p-6 rounded-lg text-xl xl:text-3xl text-[var(--text-secondary)]">
                 <i class={`bi bi-${card.Icon}`}></i>
               </div>
               <div>
-                <h3 className="font-bold text-[var(--text-dark)] text-xl mb-2">{card.Heading}</h3>
-                <p className="text-[var(--text-primary)] ">{card.Description}</p>
+                <h3 className="font-bold text-[var(--text-dark)] xl:text-xl text-lg mb-2">{card.Heading}</h3>
+                <p className="text-[var(--text-primary)] text-sm xl:text-lg">{card.Description}</p>
               </div>
             </div>
           ))}
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

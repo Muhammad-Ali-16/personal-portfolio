@@ -5,6 +5,7 @@ import OverlayBar from './components/layout/OverlayBar';
 import Hero from './components/sections/Hero';
 import About from './components/sections/About';
 import Services from './components/sections/Services';
+import Summary from './components/sections/Summary';
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
       <Hero />
       <About/>
       <Services />
+      <Summary/>
     </main>
   )
 }
