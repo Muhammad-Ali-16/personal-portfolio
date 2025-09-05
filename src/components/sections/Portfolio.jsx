@@ -39,7 +39,7 @@ function Portfolio() {
       Technologies: 'HTML, CSS, JavaScript and Bootstrap',
       Industry: 'Food & Beverage',
       Date: 'June 05, 2024',
-      UrlLink: 'https://grilrestaurant.netlify.app/',
+      UrlLink: 'https://restfolio.netlify.app/',
       Img: restaurant
     },
     {
@@ -63,7 +63,7 @@ function Portfolio() {
       Technologies: 'HTML, CSS, JavaScript and Bootstrap',
       Industry: 'Car Rental',
       Date: 'February 08, 2024',
-      UrlLink: 'https://muhammad-ali-16.github.io/Luxe-Drive/',
+      UrlLink: 'https://luxury-drive.netlify.app/',
       Img: carrental
     },
     {
