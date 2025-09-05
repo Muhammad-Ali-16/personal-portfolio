@@ -22,8 +22,8 @@ function Summary() {
 
 
   return (
-    <section className='h-auto bg-[var(--background-white)] w-full' id="resume">
-      <div className="w-full mx-auto pt-20 pb-12">
+    <section className='summary-main h-auto bg-[var(--background-white)] w-full' id="resume">
+      <div className="summary-content w-full mx-auto pt-20 pb-12">
 
         <SectionHeading Heading={"Summary"} SubHeading={"Resume"} />
         <div className="resume-content max-w-screen-2xl mx-auto mt-15 xl:mt-20 grid grid-rows-1 lg:grid-cols-2 grid-cols-1 gap-8 lg:gap-15">

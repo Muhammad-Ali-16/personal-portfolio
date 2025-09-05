@@ -10,9 +10,9 @@ function OverlayBar() {
   }
 
   return (
-    <nav className='max-h-[60vh] block xl:hidden bg-[var(--background-dark)] fixed w-full text-[var(--text-heading-light)] z-10'>
+    <nav className='overlay-bar max-h-[60vh] block xl:hidden bg-[var(--background-dark)] fixed w-full text-[var(--text-heading-light)] z-10'>
       <div className='mx-4 my-2 lg:m-5'>
-        <div className='flex flex-row items-center justify-between'>
+        <div className='overlaybar-content flex flex-row items-center justify-between'>
           <h3 className='text-lg lg:text-xl font-bold top-0'>Muhammad Ali</h3>
           <div className='social-icons flex flex-row justify-center items-center space-x-3 lg:space-x-5 text-sm lg:text-lg'>
             <SocialIcons />
@@ -25,7 +25,7 @@ function OverlayBar() {
             </div>
           </div>
         </div>
-        <div className={`mt-3 overlay-content transition-all duration-400 ${isOpen ? 'max-h-[60vh] opacity-100' : 'max-h-0 opacity-0'} ease-in-out`}>
+        <div className={`overlaybar-links mt-3 overlay-content transition-all duration-400 ${isOpen ? 'max-h-[60vh] opacity-100' : 'max-h-0 opacity-0'} ease-in-out`}>
           <ul className='space-y-4'>
             <NavLinks border="border-b border-[#fafafa26] pb-3" />
           </ul>

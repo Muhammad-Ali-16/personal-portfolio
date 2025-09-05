@@ -6,6 +6,7 @@ import Hero from './components/sections/Hero';
 import About from './components/sections/About';
 import Services from './components/sections/Services';
 import Summary from './components/sections/Summary';
+import Portfolio from './components/sections/Portfolio';
 
 function App() {
 
@@ -15,9 +16,10 @@ function App() {
       <SideBar />
       <OverlayBar />
       <Hero />
-      <About/>
+      <About />
       <Services />
-      <Summary/>
+      <Summary />
+      <Portfolio />
     </main>
   )
 }

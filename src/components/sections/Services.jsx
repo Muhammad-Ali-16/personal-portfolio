@@ -13,7 +13,7 @@ function Services() {
   ]
 
   return (
-    <section className='h-auto bg-[var(--background-light)] w-full' id="services">
+    <section className='services-main h-auto bg-[var(--background-light)] w-full' id="services">
       <div className="w-full mx-auto pt-20 pb-12">
         <SectionHeading Heading={"Services"} SubHeading={"What I Do?"} />
         <div className="services-content max-w-screen-2xl mx-auto mt-15 xl:mt-20 grid grid-rows-1 lg:grid-cols-2 grid-cols-1 gap-8 lg:gap-15">
@@ -21,7 +21,7 @@ function Services() {
           {ServicesCards.map((card) => (
             <div className="service-card flex flex-row justify-start  items-center space-x-6 mx-8 lg:mx-4" key={card.id}>
               <div className="bg-[var(--background-white)] drop-shadow-sm/25 flex justify-center items-center p-3 xl:p-6 rounded-lg text-xl xl:text-3xl text-[var(--text-secondary)]">
-                <i class={`bi bi-${card.Icon}`}></i>
+                <i className={`bi bi-${card.Icon}`}></i>
               </div>
               <div>
                 <h3 className="font-bold text-[var(--text-dark)] xl:text-xl text-lg mb-2">{card.Heading}</h3>
