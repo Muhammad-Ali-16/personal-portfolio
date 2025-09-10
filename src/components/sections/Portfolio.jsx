@@ -75,7 +75,7 @@ function Portfolio() {
       Technologies: 'HTML, Tailwind CSS, React and Swiper.JS',
       Industry: 'Information Technology / Business Solutions',
       Date: 'August 20, 2025',
-      UrlLink: 'https://muhammad-ali-16.github.io/bitmatrix/',
+      UrlLink: 'https://bit-matrix.netlify.app/',
       Img: bitmatrix
     },
     {
