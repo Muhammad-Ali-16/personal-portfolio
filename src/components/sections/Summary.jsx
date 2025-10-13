@@ -23,33 +23,33 @@ function Summary() {
 
   return (
     <section className='summary-main h-auto bg-[var(--section-background-1)] w-full' id="resume">
-      <div className="summary-content w-full mx-auto pt-20 pb-12">
+      <div className="summary-content max-w-7xl mx-auto pt-20 pb-12">
 
         <SectionHeading Heading={"Summary"} SubHeading={"Resume"} />
         <div className="resume-content max-w-screen-2xl mx-auto mt-15 xl:mt-20 grid grid-rows-1 lg:grid-cols-2 grid-cols-1 gap-8 lg:gap-15">
           <div className="resume-education mx-8 lg:mx-4">
-            <h3 className="font-bold text-lg xl:text-2xl text-[var(--text-dark)] mb-6">My Education</h3>
+            <h3 className="font-bold text-lg xl:text-xl text-[var(--text-dark)] mb-6">My Education</h3>
             {Education.map((education) => (
               <div className="border border-[var(--button-color-1)]/40 my-6 rounded-lg" key={education.id}>
                 <div className="m-5">
                   <div className="education-duration bg-[var(--text-secondary)] inline-block px-2 py-1 rounded-lg mb-3 text-white text-sm">{education.duration}</div>
-                  <h3 className="font-bold text-md xl:text-xl text-[var(--text-dark)]">{education.program}</h3>
-                  <h4 className="text-sm my-2 text-[var(--text-danger)] xl:text-[13px]">{education.instituteName}</h4>
-                  <p className="text-sm xl:text-lg text-[var(--text-primary)]">{education.description}</p>
+                  <h3 className="font-bold text-md xl:text-lg text-[var(--text-dark)]">{education.program}</h3>
+                  <h4 className="text-sm my-2 text-[var(--text-danger)] xl:text-[12px]">{education.instituteName}</h4>
+                  <p className="text-sm xl:text-md text-[var(--text-primary)]">{education.description}</p>
                 </div>
               </div>
             ))}
           </div>
 
           <div className="resume-experience mx-8 lg:mx-4">
-            <h3 className="font-bold text-lg xl:text-2xl text-[var(--text-dark)] mb-6">My Experience</h3>
+            <h3 className="font-bold text-lg xl:text-xl text-[var(--text-dark)] mb-6">My Experience</h3>
             {Experience.map((experience) => (
               <div className="border border-[var(--button-color-1)]/40 my-6 rounded-lg" key={experience.id}>
                 <div className="m-5">
                   <div className="experience-duration bg-[var(--text-secondary)] inline-block px-2 py-1 rounded-lg mb-3 text-white text-sm">{experience.duration}</div>
-                  <h3 className="font-bold text-md xl:text-xl text-[var(--text-dark)]">{experience.program}</h3>
-                  <h4 className="text-sm my-2 text-[var(--text-danger)] xl:text-[13px]">{experience.instituteName}</h4>
-                  <p className="text-sm xl:text-lg text-[var(--text-primary)]">{experience.description}</p>
+                  <h3 className="font-bold text-md xl:text-lg text-[var(--text-dark)]">{experience.program}</h3>
+                  <h4 className="text-sm my-2 text-[var(--text-danger)] xl:text-[12px]">{experience.instituteName}</h4>
+                  <p className="text-sm xl:text-md text-[var(--text-primary)]">{experience.description}</p>
                 </div>
               </div>
             ))}

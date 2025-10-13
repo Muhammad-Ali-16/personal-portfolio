@@ -4,27 +4,27 @@ import SocialIcons from "../common/SocialIcons"
 function Contact() {
   return (
     <section className='contact-main h-auto bg-[var(--section-background-1)] w-full' id="contact">
-      <div className="w-full mx-auto pt-20 pb-12">
+      <div className="max-w-7xl mx-auto pt-20 pb-12">
         <SectionHeading Heading={"Contact"} SubHeading={"Get in Touch"} />
-        <div className="contact-content max-w-screen-2xl mx-auto mt-15 xl:mt-20 grid grid-rows-1 grid-cols-1 lg:grid-cols-3 xl:grid-cols-3 place-items-center gap-12">
+        <div className="contact-content max-w-7xl mx-auto mt-15 xl:mt-20 grid grid-rows-1 grid-cols-1 lg:grid-cols-3 xl:grid-cols-3 place-items-center gap-12">
 
 
           <div className='text-start place-self-start mx-4 lg:mx-20 mt-0 lg:mt-5'>
             <div>
-              <h4 className='text-[var(--text-secondary)] text-xl mb-2 mt-5'>Address:</h4>
+              <h4 className='text-[var(--text-secondary)] text-lg mb-2 mt-5'>Address:</h4>
               <p className='text-[var(--text-primary)]'>Creek Road <br />Karachi, Pakistan</p>
             </div>
             <div>
-              <h4 className='text-[var(--text-secondary)] text-xl mb-2 mt-5'>Phone:</h4>
+              <h4 className='text-[var(--text-secondary)] text-lg mb-2 mt-5'>Phone:</h4>
               <p className='text-[var(--text-primary)]'>+92 32331012 96</p>
             </div>
             <div>
-              <h4 className='text-[var(--text-secondary)] text-xl mb-2 mt-5'>Email:</h4>
+              <h4 className='text-[var(--text-secondary)] text-lg mb-2 mt-5'>Email:</h4>
               <p className='text-[var(--text-primary)]'>aliraza1.work@gmail.com <br />muhammadaliraza.mobile@gmail.com</p>
             </div>
 
             <div>
-              <h4 className='text-[var(--text-secondary)] text-xl mb-2 mt-5'>Follow Me</h4>
+              <h4 className='text-[var(--text-secondary)] text-lg mb-2 mt-5'>Follow Me</h4>
               <div className="space-x-4 text-xl">
                 <SocialIcons />
               </div>

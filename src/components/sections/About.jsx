@@ -3,7 +3,7 @@ import SectionHeading from "../common/SectionHeading"
 function About() {
   return (
     <section className='about-main h-auto bg-[var(--section-background-1)] w-full' id="about">
-      <div className="w-full mx-auto pt-20 pb-12">
+      <div className="max-w-7xl mx-auto pt-20 pb-12">
         <SectionHeading Heading={"About Me"} SubHeading={"Know Me More"} />
         <div className="about-content  max-w-screen-2xl mx-auto mt-15 xl:mt-20">
           <div className=" mx-8 lg:mx-28 xl:mx-10 grid grid-rows-1 grid-cols-3">

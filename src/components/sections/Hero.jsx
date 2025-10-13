@@ -7,7 +7,7 @@ function Hero() {
       <div className="relative max-w-screen-2xl mx-auto">
         <div className='hero-content'>
           <h4 className='text-2xl lg:text-3xl font-semibold'>Welcome!</h4>
-          <h1 className='text-3xl lg:text-6xl font-bold my-3'>I'm  <Typewriter
+          <h1 className='text-3xl lg:text-6xl font-bold my-3 '>I'm  <Typewriter
             words={['Ali Raza', 'a Web Designer']}
             loop={true}
             cursor

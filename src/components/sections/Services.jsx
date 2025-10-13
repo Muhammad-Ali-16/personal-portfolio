@@ -14,18 +14,18 @@ function Services() {
 
   return (
     <section className='services-main h-auto bg-[var(--section-background-2)] w-full' id="services">
-      <div className="w-full mx-auto pt-20 pb-12">
+      <div className="max-w-7xl mx-auto pt-20 pb-12">
         <SectionHeading Heading={"Services"} SubHeading={"What I Do?"} />
-        <div className="services-content max-w-screen-2xl mx-auto mt-15 xl:mt-20 grid grid-rows-1 lg:grid-cols-2 grid-cols-1 gap-8 lg:gap-15">
+        <div className="services-content max-w-6xl mx-auto mt-15 xl:mt-20 grid grid-rows-1 lg:grid-cols-2 grid-cols-1 gap-8 lg:gap-15">
 
           {ServicesCards.map((card) => (
-            <div className="service-card flex flex-row justify-start  items-center space-x-6 mx-8 lg:mx-4" key={card.id}>
-              <div className="bg-[var(--services-cards-bg)] drop-shadow-sm/25 flex justify-center items-center p-3 xl:p-6 rounded-lg text-xl xl:text-3xl text-[var(--text-secondary)]">
+            <div className="service-card flex flex-row justify-start items-center space-x-6 mx-8 lg:mx-4" key={card.id}>
+              <div className="bg-[var(--services-cards-bg)] drop-shadow-sm/25 flex justify-center items-center p-3 xl:p-5 rounded-lg text-xl xl:text-2xl text-[var(--text-secondary)]">
                 <i className={`bi bi-${card.Icon}`}></i>
               </div>
               <div>
-                <h3 className="font-bold text-[var(--text-dark)] xl:text-xl text-lg mb-2">{card.Heading}</h3>
-                <p className="text-[var(--text-primary)] text-sm xl:text-lg">{card.Description}</p>
+                <h3 className="font-bold text-[var(--text-dark)] text-lg mb-2">{card.Heading}</h3>
+                <p className="text-[var(--text-primary)] text-sm ">{card.Description}</p>
               </div>
             </div>
           ))}

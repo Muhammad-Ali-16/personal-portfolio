@@ -24,7 +24,7 @@ function Portfolio() {
       Category: 'Weather App',
       Info: 'Sigma-Storm is a responsive weather application that provides real-time weather data for any location. It uses API integration to deliver accurate forecasts with a clean and intuitive UI.',
       Client: 'Personal Project',
-      Technologies: 'React, Tailwind CSS, OpenWeather API',
+      Technologies: 'React, Tailwind CSS and OpenWeather API',
       Industry: 'Weather & Climate',
       Date: 'August 11, 2025',
       UrlLink: 'https://sigmastorm.netlify.app/',
@@ -32,13 +32,13 @@ function Portfolio() {
     },
     {
       Id: '2',
-      Title: 'Grill Restaurant',
+      Title: 'Restfolio',
       Category: 'Restaurant Website',
-      Info: 'Grill Restaurant is a modern, responsive landing page designed for showcasing a restaurant’s menu and services. It features visually appealing sections, smooth navigation, and a clear call-to-action for reservations.',
+      Info: 'Restfolio is a modern, responsive landing page designed for showcasing a restaurant’s menu and services. It features visually appealing sections, smooth navigation, and a clear call-to-action for reservations.',
       Client: 'Personal Project',
-      Technologies: 'HTML, CSS, JavaScript and Bootstrap',
+      Technologies: 'HTML, Tailwind CSS and React',
       Industry: 'Food & Beverage',
-      Date: 'June 05, 2024',
+      Date: 'October 10, 2025',
       UrlLink: 'https://restfolio.netlify.app/',
       Img: restaurant
     },
@@ -90,21 +90,18 @@ function Portfolio() {
       UrlLink: 'https://quizzzyfy.netlify.app/',
       Img: quizapp
     }
-
-
-
   ]
 
   return (
     <section className='portfolio-main h-auto bg-[var(--section-background-2)] w-full' id="portfolio">
-      <div className="w-full mx-auto pt-20 pb-12">
+      <div className="max-w-7xl mx-auto pt-20 pb-12">
         <SectionHeading Heading={"Portfolio"} SubHeading={"My Work"} />
         <div className="portfolio-content max-w-screen-2xl mx-auto mt-15 xl:mt-20">
 
 
-  <div className="columns-1 lg:columns-2 xl:columns-3 gap-4 relative mx-8 mb-4 cursor-pointer" >
-          {PortfolioWork.map((work) => (
-            <div key={work.Id}>
+          <div className="columns-1 lg:columns-2 xl:columns-3 gap-4 relative mx-8 mb-4 cursor-pointer" >
+            {PortfolioWork.map((work) => (
+              <div key={work.Id}>
                 <div className="relative overflow-hidden mb-4 group rounded-lg " onClick={() => { HandleProjectDetails(work) }}>
                   <img
                     src={work.Img} alt={`${work.Category} Img`}
@@ -115,52 +112,52 @@ function Portfolio() {
                     <p className="text-white/65">{work.Category}</p>
                   </div>
                 </div>
-              
 
-              {activeProject && (
-                <div className="fixed inset-0 bg-black/20 text-[var(--text-dark)] flex items-center justify-center z-50 px-5">
-                  <div className="bg-white p-6 shadow-lg relative max-h-[85vh] overflow-y-scroll lg:overflow-hidden rounded-lg">
-                    <h2 className="text-2xl font-bold mb-4 text-center">{activeProject.Title}</h2>
-                    <button
-                      className="mt-4 px-4 py-2 rounded absolute right-0 top-0 mr-4 text-2xl cursor-pointer"
-                      onClick={() => setActiveProject(null)}>
-                      <i className="bi bi-x-lg"></i>
-                    </button>
 
-                    <div className="flex flex-col lg:flex-row space-x-4">
-                      <img src={activeProject.Img} alt={`${activeProject.Category} Img`} className="lg:max-w-[400px] xl:max-w-xl mx-auto lg:mx-5 self-center lg:self-auto rounded-lg max-h-[500px]" />
+                {activeProject && (
+                  <div className="fixed inset-0 bg-black/20 text-[var(--text-dark)] flex items-center justify-center z-50 px-5">
+                    <div className="bg-white p-6 shadow-lg relative max-h-[85vh] overflow-y-scroll lg:overflow-hidden rounded-lg">
+                      <h2 className="text-2xl font-bold mb-4 text-center">{activeProject.Title}</h2>
+                      <button
+                        className="mt-4 px-4 py-2 rounded absolute right-0 top-0 mr-4 text-2xl cursor-pointer"
+                        onClick={() => setActiveProject(null)}>
+                        <i className="bi bi-x-lg"></i>
+                      </button>
 
-                      <div>
-                        <div className="info mt-4 lg:mt-0">
-                          <h4 className="font-bold text-md lg:text-lg">Project Info:</h4>
-                          <p className="max-w-2xl text-sm lg:text-[12px] my-2 leading-6">{activeProject.Info}</p>
-                        </div>
+                      <div className="flex flex-col lg:flex-row space-x-4">
+                        <img src={activeProject.Img} alt={`${activeProject.Category} Img`} className="lg:max-w-[400px] xl:max-w-xl mx-auto lg:mx-5 self-center lg:self-auto rounded-lg max-h-[500px]" />
 
-                        <div className="details flex flex-col">
-                          <h4 className="font-bold text-md lg:text-lg my-4">Project Details:</h4>
-                          <ul className="space-y-5">
-                            <li><h4 className="border-b border-[var(--portfolio-border)] pb-3 font-semibold text-sm lg:text-[12px]">Client: <span className="font-light"> {activeProject.Client} </span> </h4></li>
-                            <li><h4 className="border-b border-[var(--portfolio-border)] pb-3 font-semibold text-sm lg:text-[12px]">Technologies: <span className="font-light"> {activeProject.Technologies} </span> </h4></li>
-                            <li><h4 className="border-b border-[var(--portfolio-border)] pb-3 font-semibold text-sm lg:text-[12px]">Industry:<span className="font-light"> {activeProject.Industry} </span> </h4></li>
-                            <li><h4 className="border-b border-[var(--portfolio-border)] pb-3 font-semibold text-sm lg:text-[12px]">Date: <span className="font-light"> {activeProject.Date} </span> </h4></li>
-                            <li><h4 className="border-b border-[var(--portfolio-border)] pb-3 font-semibold text-sm lg:text-[12px]">URL: <span className="font-light text-[var(--text-secondary)]"><a href={activeProject.UrlLink} target="_blank">{activeProject.UrlLink}</a></span> </h4></li>
+                        <div>
+                          <div className="info mt-4 lg:mt-0">
+                            <h4 className="font-bold text-md lg:text-lg">Project Info:</h4>
+                            <p className="max-w-2xl text-sm lg:text-[12px] my-2 leading-6">{activeProject.Info}</p>
+                          </div>
 
-                            <li className="portfolio-social-icons pb-3 text-lg lg:text-xl space-x-4">
-                              <a target="_blank" href="https://www.facebook.com/profile.php?id=100086266104286"><i className="text-[var(--text-primary)] transition duration-250 hover:text-[#4267B2] bi bi-facebook"></i></a>
-                              <a target="_blank" href="https://www.instagram.com/m.ali._.raza/"><i className="text-[var(--text-primary)] transition duration-250 hover:text-transparent bg-clip-text bg-[radial-gradient(circle_at_30%_107%,#fdf497_0%,#fdf497_5%,#fd5949_45%,#d6249f_60%,#285AEB_90%)] bi bi-instagram "></i></a>
-                              <a target="_blank" href="https://www.linkedin.com/in/muhammad-ali18/"><i className="text-[var(--text-primary)] transition duration-250 hover:text-[#0A66C2] bi bi-linkedin"></i></a>
-                              <a target="_blank" href="https://github.com/Muhammad-Ali-16"><i className="text-[var(--text-primary)] transition duration-250 hover:text-[#24292e] bi bi-github"></i></a>
-                            </li>
-                          </ul>
+                          <div className="details flex flex-col">
+                            <h4 className="font-bold text-md lg:text-lg my-4">Project Details:</h4>
+                            <ul className="space-y-5">
+                              <li><h4 className="border-b border-[var(--portfolio-border)] pb-3 font-semibold text-sm lg:text-[12px]">Client: <span className="font-light"> {activeProject.Client} </span> </h4></li>
+                              <li><h4 className="border-b border-[var(--portfolio-border)] pb-3 font-semibold text-sm lg:text-[12px]">Technologies: <span className="font-light"> {activeProject.Technologies} </span> </h4></li>
+                              <li><h4 className="border-b border-[var(--portfolio-border)] pb-3 font-semibold text-sm lg:text-[12px]">Industry:<span className="font-light"> {activeProject.Industry} </span> </h4></li>
+                              <li><h4 className="border-b border-[var(--portfolio-border)] pb-3 font-semibold text-sm lg:text-[12px]">Date: <span className="font-light"> {activeProject.Date} </span> </h4></li>
+                              <li><h4 className="border-b border-[var(--portfolio-border)] pb-3 font-semibold text-sm lg:text-[12px]">URL: <span className="font-light text-[var(--text-secondary)]"><a href={activeProject.UrlLink} target="_blank">{activeProject.UrlLink}</a></span> </h4></li>
+
+                              <li className="portfolio-social-icons pb-3 text-lg lg:text-xl space-x-4">
+                                <a target="_blank" href="https://www.facebook.com/profile.php?id=100086266104286"><i className="text-[var(--text-primary)] transition duration-250 hover:text-[#4267B2] bi bi-facebook"></i></a>
+                                <a target="_blank" href="https://www.instagram.com/m.ali._.raza/"><i className="text-[var(--text-primary)] transition duration-250 hover:text-transparent bg-clip-text bg-[radial-gradient(circle_at_30%_107%,#fdf497_0%,#fdf497_5%,#fd5949_45%,#d6249f_60%,#285AEB_90%)] bi bi-instagram "></i></a>
+                                <a target="_blank" href="https://www.linkedin.com/in/muhammad-ali18/"><i className="text-[var(--text-primary)] transition duration-250 hover:text-[#0A66C2] bi bi-linkedin"></i></a>
+                                <a target="_blank" href="https://github.com/Muhammad-Ali-16"><i className="text-[var(--text-primary)] transition duration-250 hover:text-[#24292e] bi bi-github"></i></a>
+                              </li>
+                            </ul>
+                          </div>
                         </div>
                       </div>
-                    </div>
 
+                    </div>
                   </div>
-                </div>
-              )}
-            </div>
-          ))}
+                )}
+              </div>
+            ))}
           </div>
 
         </div>
