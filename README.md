@@ -21,13 +21,13 @@ https://aliraza-personalportfolio.netlify.app/
    ```bash
    npm install
    ```  
-3. Set up your API key in the configuration file or environment variable.  
-4. Run the application:  
+
+3. Run the application:  
    ```bash
    npm run dev
    ```  
-5. Open the app in your browser or terminal (depending on your setup) and start chatting with the bot.  
-
+4. Open the app in your browser or terminal (depending on your setup)
+5. 
 **Project Files (typical):**
 - `index.html` — main page / UI  
 - `style.css` — styling for the layout and responsiveness  
